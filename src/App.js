@@ -37,6 +37,7 @@ const useStyles = makeStyles({
 });
 
 const App = () => {
+  
   const classes = useStyles();
   const celulares = [
     {
@@ -473,6 +474,7 @@ const App = () => {
   };
 
   const addShopCart = (item, index) => {
+    
     const aux = shoppingCart.find((x) => x.model === item.modelo);
     //console.log(item);
     if (!aux) {
@@ -487,13 +489,16 @@ const App = () => {
   };
 
   return (
+    
     <React.Fragment>
+      <h1>Tienda de Celulares Mobi</h1>
       <Badge
         badgeContent={shoppingCart.length}
         color="error"
         style={{ float: "right" }}
       >
         <ShoppingCart />
+        
       </Badge>
 
       <br />
